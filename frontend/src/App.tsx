@@ -46,7 +46,7 @@ export default function App() {
 
   // ── Load cached events instantly ──
   useEffect(() => {
-    const cached = localStorage.getItem('blocktalk_events_cache');
+    const cached = localStorage.getItem('blocktalk_events_v2');
     if (cached) {
       try {
         setChatHistory(JSON.parse(cached));
@@ -150,7 +150,7 @@ export default function App() {
               // sort oldest first for chat flow
               const sorted = unique.sort((a, b) => (a.ledger > b.ledger) ? 1 : -1);
 
-              localStorage.setItem('blocktalk_events_cache', JSON.stringify(sorted));
+              localStorage.setItem('blocktalk_events_v2', JSON.stringify(sorted));
               return sorted;
             });
           }
