@@ -103,8 +103,8 @@ export default function App() {
         const server = new rpc.Server(RPC_URL);
         const latestLedger = await server.getLatestLedger();
 
-        // Initial fetch: large window. Successive: cursor
-        const startLedger = lastFetched || Math.max(0, latestLedger.sequence - 5000);
+        // Initial fetch: Massive window (~5 days of ledgers). Successive: cursor
+        const startLedger = lastFetched || Math.max(0, latestLedger.sequence - 100000);
 
         const eventsReq = await server.getEvents({
           startLedger,
@@ -112,7 +112,7 @@ export default function App() {
             type: "contract",
             contractIds: [CONTRACT_ID]
           }],
-          limit: 100
+          limit: 10000
         });
 
         lastFetched = latestLedger.sequence;
