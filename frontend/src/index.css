@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Bungee&display=swap');
+
+:root {
+  --neo-bg: #ffffff;
+  --neo-card: #ffffff;
+  --neo-border: 4px solid #000000;
+  --neo-shadow: 6px 6px 0px #000000;
+  --neo-hover-shadow: 2px 2px 0px #000000;
+  
+  /* Bold Brutalist Accents */
+  --c-yellow: #ffee00;
+  --c-pink: #ff2a7a;
+  --c-cyan: #00f0ff;
+  --c-green: #00ff66;
+  --c-purple: #b05cff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background-color: var(--neo-bg);
+  color: #000;
+  min-height: 100vh;
+  /* subtle grid background */
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ── Typo & Utilities ── */
+h1, h2, h3 { margin: 0; text-transform: uppercase; letter-spacing: -1px; font-weight: 700; }
+a { text-decoration: none; color: inherit; }
+
+/* ── Layout ── */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.content-layout {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--c-yellow);
+  padding: 1rem 1.5rem;
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  border-radius: 0;
+}
+.header-title {
+  font-family: 'Bungee', system-ui, sans-serif;
+  font-size: 2.3rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 4px 4px 0px var(--c-pink);
+  letter-spacing: 2px;
+}
+
+/* ── Buttons ── */
+.neo-btn {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--neo-card);
+  padding: 0.6rem 1.2rem;
+  border: var(--neo-border);
+  box-shadow: 4px 4px 0px #000;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.neo-btn:hover:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+.neo-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+.neo-btn.primary { background: var(--c-cyan); }
+.neo-btn.danger { background: var(--c-pink); color: #fff; }
+.neo-btn.accent { background: var(--c-green); }
+
+/* ── Inputs ── */
+.neo-input {
+  flex: 1;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  border: var(--neo-border);
+  outline: none;
+  background: #fff;
+  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.05);
+}
+.neo-input:focus {
+  background: #fffae6;
+}
+
+/* ── Sidebar & Contacts ── */
+.contacts-sidebar {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  background: var(--neo-card);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  overflow: hidden;
+}
+.sidebar-header {
+  background: var(--c-purple);
+  padding: 1.5rem 1rem;
+  border-bottom: var(--neo-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contacts-list {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+}
+.contact-card {
+  padding: 1.5rem 1rem;
+  border-bottom: var(--neo-border);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact-card:hover {
+  background: var(--c-cyan);
+}
+.contact-card.active {
+  background: var(--c-yellow);
+  pointer-events: none;
+}
+.contact-avatar {
+  background: #000;
+  color: #fff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+/* ── Chat Container ── */
+.chat-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--neo-card);
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  overflow: hidden; 
+}
+
+/* ── Header Bar ── */
+.chat-header-bar {
+  display: flex;
+  border-bottom: var(--neo-border);
+  background: var(--c-cyan);
+  padding: 1.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  align-items: center;
+}
+
+/* ── Messages Area ── */
+.messages-area {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+  background: #fff;
+}
+.empty-state {
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+  border: var(--neo-border);
+  background: var(--neo-bg);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Message Bubbles ── */
+.msg-row {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+.msg-sender {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.msg-bubble {
+  padding: 1rem 1.5rem;
+  border: var(--neo-border);
+  box-shadow: 4px 4px 0px #000;
+  font-weight: 600;
+  font-size: 1.1rem;
+  word-break: break-word;
+}
+/* Mine */
+.msg-row.mine { align-self: flex-end; }
+.msg-row.mine .msg-bubble { background: var(--c-green); }
+.msg-row.mine .msg-sender { text-align: right; }
+/* Theirs */
+.msg-row.theirs { align-self: flex-start; }
+.msg-row.theirs .msg-bubble { background: var(--c-pink); color: #fff; }
+
+/* ── Skeletons ── */
+.skeleton-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0.7;
+}
+.skeleton-row.mine { align-items: flex-end; }
+.skeleton-bubble {
+  height: 60px;
+  width: 200px;
+  background: var(--neo-bg);
+  border: var(--neo-border);
+  animation: pulse 1.5s infinite alternate;
+}
+.skeleton-row.mine .skeleton-bubble { width: 150px; background: #cfcfcf; }
+
+@keyframes pulse {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+/* ── Compose Area ── */
+.compose-area {
+  display: flex;
+  border-top: var(--neo-border);
+  background: #fff;
+}
+.compose-area .neo-input {
+  border: none;
+  box-shadow: none;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+}
+.compose-area .neo-btn {
+  border: none;
+  border-left: var(--neo-border);
+  box-shadow: none;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+}
+.compose-area .neo-btn:hover:not(:disabled) {
+  background: #000;
+  color: var(--c-yellow);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Spinner */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Toast */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 50;
+}
+.toast {
+  padding: 1rem 1.5rem;
+  border: var(--neo-border);
+  box-shadow: var(--neo-shadow);
+  font-weight: 700;
+  background: #fff;
+  animation: slideIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+.toast.success { background: var(--c-green); }
+.toast.error { background: var(--c-pink); color: #fff; }
+
+
