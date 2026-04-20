@@ -6,7 +6,7 @@ import { Contract, rpc, TransactionBuilder, Address, nativeToScVal, scValToNativ
 import { Send, MessageSquare, ShieldAlert, Loader2, LogOut } from 'lucide-react';
 import BackgroundEffects from './BackgroundEffects';
 
-const CONTRACT_ID = "CBEDLD7IOADZNNM4JY3YN7PU3HLCOBFTMV6HIKFGMVAAXAV2KBQ2LDYB"; // Deployed
+const CONTRACT_ID = "CADSXG4EF6H6DIWUKGTO4FGZJW4CTVADQTPFXCWFHFZSLPMDUFVBM2EX"; // Deployed
 const RPC_URL = "https://soroban-testnet.stellar.org:443";
 const NETWORK_PASSPHRASE = Networks.TESTNET;
 

@@ -13,8 +13,8 @@ Designed with a heavy **Neo-Brutalism** aesthetic featuring raw borders, intense
 | Field | Value |
 |---|---|
 | **Network** | Stellar Testnet |
-| **Contract ID** | `CBEDLD7IOADZNNM4JY3YN7PU3HLCOBFTMV6HIKFGMVAAXAV2KBQ2LDYB` |
-| **Explorer** | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CBEDLD7IOADZNNM4JY3YN7PU3HLCOBFTMV6HIKFGMVAAXAV2KBQ2LDYB) |
+| **Contract ID** | `CADSXG4EF6H6DIWUKGTO4FGZJW4CTVADQTPFXCWFHFZSLPMDUFVBM2EX` |
+| **Explorer** | [View on Stellar Expert](https://stellar.expert/explorer/testnet/contract/CADSXG4EF6H6DIWUKGTO4FGZJW4CTVADQTPFXCWFHFZSLPMDUFVBM2EX) |
 
 ---
 
