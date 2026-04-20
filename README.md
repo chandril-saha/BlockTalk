@@ -20,8 +20,6 @@ Designed with a heavy **Neo-Brutalism** aesthetic featuring raw borders, intense
 
 ## 🏆 Project Requirements & Achievements
 
-### BlockTalk implements both Level 2 & Level 3 hackathon requirements:
-
 1. **Minimal, Functional Mini-dApp**
    - Clean, isolated repository with a complete decentralized chat flow.
 2. **Three Error Types Handled**
