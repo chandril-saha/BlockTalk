@@ -54,7 +54,7 @@ The rust smart contract verifies three specific strict rules before emitting any
 
 ## 🎥 Demo Video:
 
-
+[View on YouTube](https://youtu.be/PzfPCks9jyE)
 
 ---
 
